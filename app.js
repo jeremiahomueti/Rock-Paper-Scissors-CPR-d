@@ -1,16 +1,11 @@
-computerChoiceDisplay = document.getElementById('computer-choice')
-userChoiceDisplay = document.getElementById('user-choice')
-resultDisplay = document.getElementById('result')
-possibleChoices = document.querySelectorAll('button')
-let possibleChoices
-let userChoice
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const userChoiceDisplay = document.getElementById('user-choice')
+const resultDisplay = document.getElementById('result')
+const possibleChoices = document.querySelectorAll('button')
 
 
-
-
-possibleChoices.forEach(possibleChoice => addEventListener('click', (e) =>
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', e => 
 {
-    userChoice = e.target.id
+    let userChoice = e.target.id 
     userChoiceDisplay.innerHTML = userChoice
-})
-)
+}))
